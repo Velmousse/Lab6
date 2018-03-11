@@ -115,7 +115,7 @@ public class Main {
         }
         Contact ct = new Contact();
 
-        if (entree <= map.size() && entree >= 0) ct = (Contact) map.get(entree - 1);
+        if (entree <= map.size() && entree >= 0 && !rappel) ct = (Contact) map.get(entree - 1);
         else if (rappel) ct = contactRappel;
 
         if (rappel || map.size() > 0) {
@@ -169,7 +169,7 @@ public class Main {
                 break;
             case 2:
                 if (file.size() > 0) {
-                    Contact contactTemp = (Contact) file.poll();
+                    Contact contactTemp = (Contact) file.remove();
                     System.out.println("\nVoici le contact à rappeler, il est maintenant supprimé de la liste:");
                     afficherContact(map, true, contactTemp);
                 }
