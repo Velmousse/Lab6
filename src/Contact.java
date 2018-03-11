@@ -6,8 +6,7 @@ import java.util.List;
  * Created by DufVi1731300 on 2018-02-26.
  */
 public class Contact {
-    public static int nbContacts = 0;
-    private String prenom = "", nom = "", poste = "";
+    private String prenom = "", nom = "";
     private Occupation occ = new Occupation();
     private Adresse ad = new Adresse();
 
@@ -27,14 +26,6 @@ public class Contact {
 
     public void setNom(String nom) {
         if (!nom.equals("")) this.nom = nom;
-    }
-
-    public String getPoste() {
-        return poste;
-    }
-
-    public void setPoste(String poste) {
-        if (!poste.equals("")) this.poste = poste;
     }
 
     public Occupation getOcc() {
